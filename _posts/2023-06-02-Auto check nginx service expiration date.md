@@ -5,6 +5,8 @@ categories: [Nginx]
 tags: 
 ---
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnotes.966885.xyz%2Fposts%2FAuto-check-nginx-service-expiration-date%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 Sometimes, I find myself needing to manage my nginx service, especially when it's close to the service expiration, and we need to connect with customers. However, we tend to forget about it, so I made a decision to create a script that runs on the server, automating the management process.
 
 Here's the script I've developed:
