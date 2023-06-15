@@ -4,7 +4,9 @@ title: My Linux command
 pin: true
 ---
 
-### My Linux command [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnotes.966885.xyz%2Fposts%2FMy-Linux-command%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+### My Linux command
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnotes.966885.xyz%2Fposts%2FMy-Linux-command%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 #### 关于授权chown和chmod
 
@@ -479,4 +481,5 @@ echo "$name, you will become a millionare when you are $getrich years old"
 exit 1
 done
 ```
+
 
