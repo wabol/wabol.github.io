@@ -1,5 +1,5 @@
 ---
-title: ntfy docker service
+title: Notification ssh login
 date: 2023-06-25 11:11:00 -0700
 categories: [Linux]
 tags: ntfy ssh_login

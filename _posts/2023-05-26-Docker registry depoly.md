@@ -54,3 +54,12 @@ location / {
 
 ```
 
+##### 4.how to use
+
+```
+docker tag 56f8xxxxxID hub.xxx.com/python-image
+docker login https://hub.xxx.com
+docker push hub.xxx.com/python-image
+
+```
+
