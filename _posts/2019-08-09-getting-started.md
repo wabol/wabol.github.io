@@ -6,7 +6,7 @@ categories: [Blogging, Tutorial]
 tags: [getting started]
 <<<<<<< HEAD
 =======
-pin: true
+pin: false
 img_path: '/posts/20180809'
 >>>>>>> e8ef69ad1784661c5bb06dbcf530cfa37af63383
 ---
