@@ -4,10 +4,6 @@ author: cotes
 date: 2019-08-09 20:55:00 +0800
 categories: [Blogging, Tutorial]
 tags: [getting started]
-<<<<<<< HEAD
-=======
-img_path: '/posts/20180809'
->>>>>>> e8ef69ad1784661c5bb06dbcf530cfa37af63383
 ---
 
 ## Prerequisites
