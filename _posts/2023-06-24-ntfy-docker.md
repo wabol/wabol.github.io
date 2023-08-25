@@ -1,5 +1,5 @@
 ---
-title: ntfy docker service
+title: ntfy.sh docker service
 date: 2023-06-24 11:11:00 -0700
 categories: [Docker]
 tags: ntfy 

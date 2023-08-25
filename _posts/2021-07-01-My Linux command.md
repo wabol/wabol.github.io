@@ -482,4 +482,9 @@ exit 1
 done
 ```
 
+#### Synology check ipv6
+
+```
+ip -6 address show | grep inet6 | awk '/2409/' | awk '/:ec52/ {print $2}' | cut -d'/' -f1
+```
 
