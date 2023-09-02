@@ -8,8 +8,9 @@ Pin:
 **behemoths**
 
 > It takes a lot of resources to compete with tech `behemoths` like Amazon and Microsoft
-> {: .prompt-tip }
+{: .prompt-tip }
 
-Gobs 
+**Gobs** 
 
-> gobs of cash {: .prompt-tip }
+> gobs of cash 
+{: .prompt-tip }
