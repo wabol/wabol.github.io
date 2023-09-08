@@ -8,26 +8,26 @@ pin: true
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnotes.966885.xyz%2Fposts%2FMy-Linux-command%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-#### 关于授权chown和chmod
+#### About Authorizing chown and chmod
 
-chown：用来改变目录或者文件的用户名和用户组
+chown：Used to change the owner and group of a directory or file.
 
-chmod：用来改变目录或者文件的访问权限
+chmod：Used to change the access permissions of a directory or file.
 
-**修改用户组**
-
-```
-chown root:root test.txt #修改单个文件
-chown -R root:root /www #修改某个目录并且遍历该目录
-```
-
-**修改文件权限**
+**Change the group of a user**
 
 ```
-u：代表文件所有者(user) 
-g: 代表所有者所在的群组(group) 
-o：代表其他人，但不是u和g(other)
-a：a和一起指定ugo效果一样
+chown root:root test.txt 
+chown -R root:root /www 
+```
+
+**Change file permissions**
+
+```
+u：(user) 
+g: (group) 
+o：(other)
+a：(all)
 ```
 
 ```

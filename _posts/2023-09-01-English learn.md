@@ -14,3 +14,8 @@ Pin:
 
 > gobs of cash 
 {: .prompt-tip }
+
+| Words          | Sentence         |
+|:---------------|:-----------------|
+| behemoths      | It takes a lot of resources to compete with tech `behemoths` like Amazon and Microsoft  |
+| Gobs           | gobs of cash |
