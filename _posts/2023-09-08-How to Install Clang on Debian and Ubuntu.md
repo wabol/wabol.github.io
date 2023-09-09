@@ -41,7 +41,7 @@ for example upgrade to clang 16
 
 Thanks for below link
 
-https://linux.how2shout.com/how-to-install-clang-on-ubuntu-linux/
+[Click]: https://linux.how2shout.com/how-to-install-clang-on-ubuntu-linux/	"Detail"
 
 
 
