@@ -4,11 +4,11 @@ title: My Linux command
 pin: true
 ---
 
-### My Linux command
+## My Linux command
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnotes.966885.xyz%2Fposts%2FMy-Linux-command%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-#### About Authorizing chown and chmod
+### About Authorizing chown and chmod
 
 chown：Used to change the owner and group of a directory or file.
 
@@ -60,7 +60,7 @@ chmod -R 744 /opt/elasticsearch #修改目目录以下所有的权限
 -rwxrwxrwx (777) 每个人都有读，写和执行的权限
 ```
 
-#### Centos防火墙
+### Centos防火墙
 
 **开放3306端口**
 
@@ -97,7 +97,7 @@ netstat -lnp #查看所有被监听端口
 netstat -lnp|grep 3306 #查看3306被谁监听
 ```
 
-#### 未分类
+### 未分类
 
 **Linux免密ssh登录**
 
@@ -364,7 +364,7 @@ CNAME
  --reloadcmd   "nginx -s reload"
 ```
 
-#### Nginx相关
+### Nginx相关
 
 ##### **Nginx加密访问**
 
