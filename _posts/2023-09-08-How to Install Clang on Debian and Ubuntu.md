@@ -7,29 +7,29 @@ Pin:
 
 #### Notice: I am install Clang on Debian 12 and Ubuntu 22.04.
 
-1. Using the APT Package Manager
+1 Using the APT Package Manager
 
 There execute the given command first, which updates the system packages and refreshes the APT packages list.
 
 `sudo apt update && sudo apt upgrade`
 
-2. Install Clang on server
+2 Install Clang on server
 
 `sudo apt install clang`
 
-3. Check the version
+3 Check the version
 
 `clang --version`
 
-4. Utilize the LLVM repository script to perform an upgrade for Clang
+4 Utilize the LLVM repository script to perform an upgrade for Clang
 
 `wget https://apt.llvm.org/llvm.sh`
 
-5. Modify the file have execute permissions
+5 Modify the file have execute permissions
 
 `chmod +x llvm.sh`
 
-6. Select the specific version you desire
+6 Select the specific version you desire
 
 `sudo ./llvm.sh <version number>`
 
