@@ -19,3 +19,4 @@ Pin:
 |:---------------|:-----------------|
 | behemoths      | It takes a lot of resources to compete with tech `behemoths` like Amazon and Microsoft  |
 | Gobs           | gobs of cash |
+| go back | we go back long times |
