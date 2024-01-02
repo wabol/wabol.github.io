@@ -67,11 +67,21 @@ Update the variables of `_config.yml`{: .filepath} as needed. Some of them are t
 - `timezone`
 - `lang`
 
+### Social Contact Options
+
+Social contact options are displayed at the bottom of the sidebar. You can turn on/off the specified contacts in file `_data/contact.yml`{: .filepath }.
+
 ### Customizing Stylesheet
 
+<<<<<<< HEAD
 If you need to customize the stylesheet, copy the theme's `assets/css/style.scss`{: .filepath} to the same path on your Jekyll site, and then add the custom style at the end of the style file.
 
 Starting from [`v4.1.0`][chirpy-4.1.0], if you want to overwrite the SASS variables defined in `_sass/addon/variables.scss`{: .filepath}, create a new file `_sass/variables-hook.scss`{: .filepath} and assign new values to the target variable in it.
+=======
+If you need to customize the stylesheet, copy the theme's `assets/css/jekyll-theme-chirpy.scss`{: .filepath} to the same path on your Jekyll site, and then add the custom style at the end of it.
+
+Starting with version `6.2.0`, if you want to overwrite the SASS variables defined in `_sass/addon/variables.scss`{: .filepath}, copy the main sass file `_sass/main.scss`{: .filepath} into the `_sass`{: .filepath} directory in your site's source, then create a new file `_sass/variables-hook.scss`{: .filepath} and assign new value.
+>>>>>>> ea2d238bd8adc018256862e05a5092311c87a671
 
 ### Customing Static Assets
 
@@ -87,6 +97,7 @@ You may want to preview the site contents before publishing, so just run it by:
 $ bundle exec jekyll s
 ```
 
+<<<<<<< HEAD
 Or run the site on Docker with the following command:
 
 ```console
@@ -97,6 +108,9 @@ $ docker run -it --rm \
 ```
 
 After a while, the local service will be published at _<http://127.0.0.1:4000>_.
+=======
+After a few seconds, the local service will be published at _<http://127.0.0.1:4000>_.
+>>>>>>> ea2d238bd8adc018256862e05a5092311c87a671
 
 ## Deployment
 
@@ -126,16 +140,6 @@ Go to the root of the source project, and build your site as follows:
 
 ```console
 $ JEKYLL_ENV=production bundle exec jekyll b
-```
-
-Or build the site on Docker:
-
-```console
-$ docker run -it --rm \
-    --env JEKYLL_ENV=production \
-    --volume="$PWD:/srv/jekyll" \
-    jekyll/jekyll \
-    jekyll build
 ```
 
 Unless you specified the output path, the generated site files will be placed in folder `_site`{: .filepath} of the project's root directory. Now you should upload those files to the target server.
