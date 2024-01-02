@@ -488,3 +488,10 @@ done
 ip -6 address show | grep inet6 | awk '/2409/' | awk '/:ec52/ {print $2}' | cut -d'/' -f1
 ```
 
+#### docker run script in python 
+
+`docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp 6fccc2c303ba python test.py`
+
+-w workspace
+
+6fccc2c* image ID
