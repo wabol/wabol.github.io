@@ -28,7 +28,7 @@ description: >- # used by seo meta and the atom feed
 
 <<<<<<< HEAD
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://lyducka.github.io"
+url: "https://wabol.github.io"
 =======
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -36,7 +36,7 @@ url: ""
 >>>>>>> ea2d238bd8adc018256862e05a5092311c87a671
 
 github:
-  username: lyducka # change to your github username
+  username: wabol # change to your github username
 
 twitter:
   username: twitter_username # change to your twitter username
@@ -99,7 +99,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: lyducka/lyducka.github.io # <gh-username>/<repo>
+    repo: wabol/wabol.github.io # <gh-username>/<repo>
     repo_id: R_kgDOJvfX7Q
     category: Announcements
     category_id: DIC_kwDOJvfX7c4CXSTE
