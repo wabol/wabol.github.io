@@ -21,11 +21,11 @@ xor_num = num1 ^ num2
 The properties of XOR operation are as follows:
 
 - **Reflexivity**: A number XORed with itself results in 0. That is, $ x \oplus x = 0 $.
-- **Identity**: Any number XORed with 0 results in the number itself. That is, $ x \bigoplus 0 = x $.
-- **Commutativity**: The order of operands does not affect the result of the XOR operation. That is,$ x \bigoplus y = y \bigoplus x $.
-- **Associativity**: The XOR operation can be grouped in any order without affecting the result. That is, $ x \bigoplus (y \bigoplus z) = (x \bigoplus y) \bigoplus z $.
+- **Identity**: Any number XORed with 0 results in the number itself. That is, $ x \oplus 0 = x $.
+- **Commutativity**: The order of operands does not affect the result of the XOR operation. That is,$ x \oplus y = y \oplus x $.
+- **Associativity**: The XOR operation can be grouped in any order without affecting the result. That is, $ x \oplus (y \oplus z) = (x \oplus y) \oplus z $.
 
-| A (Input) | B (Input) | $ A \bigoplus B $ (Output) |
+| A (Input) | B (Input) | $ A \oplus B $ (Output) |
 | --------- | --------- | -------------------------- |
 | 0         | 0         | 0                          |
 | 0         | 1         | 1                          |
@@ -34,7 +34,7 @@ The properties of XOR operation are as follows:
 
 **Truth table for XOR (boolean)**
 
-| A     | B     | $ A \bigoplus B $ |
+| A     | B     | $ A \oplus B $ |
 | :---- | :---- | :---------------- |
 | False | False | False             |
 | True  | False | True              |
