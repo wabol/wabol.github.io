@@ -1,6 +1,6 @@
 ---
 title: XOR Operator
-date: 2023-09-15 11:11:00 -0700
+date: 2024-02-05 11:11:00 -0700
 categories: [algorithm]
 tags: 
 Pin:
@@ -20,7 +20,7 @@ xor_num = num1 ^ num2
 
 The properties of XOR operation are as follows:
 
-- **Reflexivity**: A number XORed with itself results in 0. That is, $ x \bigoplus x = 0 $.
+- **Reflexivity**: A number XORed with itself results in 0. That is, $ x \oplus x = 0 $.
 - **Identity**: Any number XORed with 0 results in the number itself. That is, $ x \bigoplus 0 = x $.
 - **Commutativity**: The order of operands does not affect the result of the XOR operation. That is,$ x \bigoplus y = y \bigoplus x $.
 - **Associativity**: The XOR operation can be grouped in any order without affecting the result. That is, $ x \bigoplus (y \bigoplus z) = (x \bigoplus y) \bigoplus z $.
