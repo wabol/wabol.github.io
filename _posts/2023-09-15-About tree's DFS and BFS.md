@@ -24,6 +24,3 @@ In the following figure, the nodes are enumerated in the order you visit them, p
 
 ![img](https://raw.githubusercontent.com/wabol/pic/master/2024/02/upgit_20240207_1707324838.png)
 
-test
-
-![image-20240207090747016](https://raw.githubusercontent.com/wabol/pic/master/2024/02/upgit_20240207_1707325667.png)
