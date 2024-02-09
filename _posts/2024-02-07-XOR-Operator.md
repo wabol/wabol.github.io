@@ -6,7 +6,7 @@ tags:
 Pin:
 ---
 
-what is the XOR in python?
+## what is the XOR in python?
 
 In Python, **XOR is a bitwise operator** that is also known as **Exclusive OR**.
 
