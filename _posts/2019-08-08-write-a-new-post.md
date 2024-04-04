@@ -8,6 +8,7 @@ render_with_liquid: false
 ---
 
 This post will guide you how to write a post on _Chirpy_ theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.
+This post will guide you how to write a post on _Chirpy_ theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.
 
 ## Naming and Path
 
@@ -58,7 +59,6 @@ Adding author information in `_data/authors.yml` (If your website doesn't have t
 ```
 {: file="_data/authors.yml" }
 
-
 And then use `author` to specify a single entry or `authors` to specify multiple entries:
 
 ```yaml
@@ -69,11 +69,22 @@ authors: [<author1_id>, <author2_id>]   # for multiple entries
 ---
 ```
 
-
 Having said that, the key `author` can also identify multiple entries.
 
 > The benefit of reading the author information from the file `_data/authors.yml`{: .filepath } is that the page will have the meta tag `twitter:creator`, which enriches the [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution) and is good for SEO.
 {: .prompt-info }
+
+### Post Description
+
+By default, the first words of the post are used to display on the home page for a list of posts, in the _Further Reading_ section, and in the XML of the RSS feed. If you don't want to display the auto-generated description for the post, you can customize it using the `description` field in the _Front Matter_ as follows:
+
+```yaml
+---
+description: Short summary of the post.
+---
+```
+
+Additionally, the `description` text will also be displayed under the post title on the post's page.
 
 ## Table of Contents
 
@@ -107,9 +118,11 @@ math: true
 ---
 ```
 
-After enabling the mathematical feature, you can add math equations with the following syntax: 
+After enabling the mathematical feature, you can add math equations with the following syntax:
 
 - **Block math** should be added with `$$ math $$` with **mandatory** blank lines before and after `$$`
+  - **Inserting equation numbering** should be added with `$$\begin{equation} math \end{equation}$$`
+  - **Referencing equation numbering** should be done with `\label{eq:label_name}` in the equation block and `\eqref{eq:label_name}` inline with text (see example below)
 - **Inline math** (in lines) should be added with `$$ math $$` without any blank line before or after `$$`
 - **Inline math** (in lists) should be added with `\$$ math $$`
 
@@ -119,6 +132,17 @@ After enabling the mathematical feature, you can add math equations with the fol
 $$
 LaTeX_math_expression
 $$
+
+<!-- Equation numbering, keep all blank lines  -->
+
+$$
+\begin{equation}
+  LaTeX_math_expression
+  \label{eq:label_name}
+\end{equation}
+$$
+
+Can be referenced as \eqref{eq:label_name}.
 
 <!-- Inline math in lines, NO blank lines -->
 
@@ -157,6 +181,7 @@ _Image Caption_
 
 ### Size
 
+In order to prevent the page content layout from shifting when the image is loaded, we should set the width and height for each image:
 In order to prevent the page content layout from shifting when the image is loaded, we should set the width and height for each image:
 
 ```markdown
@@ -204,6 +229,7 @@ By default, the image is centered, but you can specify the position by using one
 ### Shadow
 
 The screenshots of the program window can be considered to show the shadow effect, and the shadow will be visible in the `light` mode:
+The screenshots of the program window can be considered to show the shadow effect, and the shadow will be visible in the `light` mode:
 
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: .shadow }
@@ -231,8 +257,9 @@ For instance, when using images:
 The parsing result will automatically add the CDN prefix `https://cdn.com` before the image path:
 
 ```html
-<img src="https://cdn.com/path/to/flower.png" alt="The flower">
+<img src="https://cdn.com/path/to/flower.png" alt="The flower" />
 ```
+{: .nolineno}
 {: .nolineno}
 
 ### Image Path
@@ -245,6 +272,7 @@ img_path: /img/path/
 ---
 ```
 {: .nolineno }
+{: .nolineno }
 
 And then, the image source of Markdown can write the file name directly:
 
@@ -256,17 +284,21 @@ And then, the image source of Markdown can write the file name directly:
 The output will be:
 
 ```html
-<img src="/img/path/flower.png" alt="The flower">
+<img src="/img/path/flower.png" alt="The flower" />
 ```
 {: .nolineno }
 
 ### Preview Image
 
 If you want to add an image to the top of the post contents, specify the attribute `path`, `width`, `height`, and `alt` for the image:
+If you want to add an image to the top of the post contents, specify the attribute `path`, `width`, `height`, and `alt` for the image:
 
 ```yaml
 ---
 image:
+  path: /path/to/image/file
+  width: 1000   # in pixels
+  height: 400   # in pixels
   path: /path/to/image/file
   width: 1000   # in pixels
   height: 400   # in pixels
@@ -277,7 +309,11 @@ image:
 Except for `alt`, all other options are necessary, especially the `width` and `height`, which are related to user experience and web page loading performance. The above section "[Size](#size)" also mentions this.
 
 Starting from _Chirpy v5.0.0_, the attributes `height` and `width` can be abbreviated: `height` → `h`, `width` → `w`. In addition, the [`img_path`](#image-path) can also be passed to the preview image, that is, when it has been set, the  attribute `path` only needs the image file name.
+Except for `alt`, all other options are necessary, especially the `width` and `height`, which are related to user experience and web page loading performance. The above section "[Size](#size)" also mentions this.
 
+Starting from _Chirpy v5.0.0_, the attributes `height` and `width` can be abbreviated: `height` → `h`, `width` → `w`. In addition, the [`img_path`](#image-path) can also be passed to the preview image, that is, when it has been set, the  attribute `path` only needs the image file name.
+
+Starting from _Chirpy v5.2.0_, the property for the preview image is changed to `image.path`. If upgrading the theme from a prior version, you will have to update posts' metadata to use new image property.
 Starting from _Chirpy v5.2.0_, the property for the preview image is changed to `image.path`. If upgrading the theme from a prior version, you will have to update posts' metadata to use new image property.
 
 ## Pinned Posts
@@ -376,25 +412,6 @@ If you want to display the **Liquid** snippet, surround the liquid code with `{%
 ````
 
 Or adding `render_with_liquid: false` (Requires Jekyll 4.0 or higher) to the post's YAML block.
-
-<<<<<<< HEAD
-=======
-## Videos
-
-You can embed a video with the following syntax:
-
-```liquid
-{% include embed/{Platform}.html id='{ID}' %}
-```
-Where `Platform` is the lowercase of the platform name, and `ID` is the video ID.
-
-The following table shows how to get the two parameters we need in a given video URL, and you can also know the currently supported video platforms.
-
-| Video URL                                                                                          | Platform   | ID             |
-| -------------------------------------------------------------------------------------------------- | ---------- | :------------- |
-| [https://www.**youtube**.com/watch?v=**H-B46URT4mg**](https://www.youtube.com/watch?v=H-B46URT4mg) | `youtube`  | `H-B46URT4mg`  |
-| [https://www.**twitch**.tv/videos/**1634779211**](https://www.twitch.tv/videos/1634779211)         | `twitch`   | `1634779211`   |
-| [https://www.**bilibili**.com/video/**BV1Q44y1B7Wf**](https://www.bilibili.com/video/BV1Q44y1B7Wf) | `bilibili` | `BV1Q44y1B7Wf` |
 
 >>>>>>> ea2d238bd8adc018256862e05a5092311c87a671
 ## Learn More
