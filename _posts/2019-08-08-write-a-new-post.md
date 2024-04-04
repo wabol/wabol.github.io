@@ -413,7 +413,96 @@ If you want to display the **Liquid** snippet, surround the liquid code with `{%
 
 Or adding `render_with_liquid: false` (Requires Jekyll 4.0 or higher) to the post's YAML block.
 
->>>>>>> ea2d238bd8adc018256862e05a5092311c87a671
+## Videos
+
+### Video Sharing Platform
+
+You can embed a video with the following syntax:
+
+```liquid
+{% include embed/{Platform}.html id='{ID}' %}
+```
+
+Where `Platform` is the lowercase of the platform name, and `ID` is the video ID.
+
+The following table shows how to get the two parameters we need in a given video URL, and you can also know the currently supported video platforms.
+
+| Video URL                                                                                          | Platform   | ID             |
+| -------------------------------------------------------------------------------------------------- | ---------- | :------------- |
+| [https://www.**youtube**.com/watch?v=**H-B46URT4mg**](https://www.youtube.com/watch?v=H-B46URT4mg) | `youtube`  | `H-B46URT4mg`  |
+| [https://www.**twitch**.tv/videos/**1634779211**](https://www.twitch.tv/videos/1634779211)         | `twitch`   | `1634779211`   |
+| [https://www.**bilibili**.com/video/**BV1Q44y1B7Wf**](https://www.bilibili.com/video/BV1Q44y1B7Wf) | `bilibili` | `BV1Q44y1B7Wf` |
+
+### Video File
+
+If you want to embed a video file directly, use the following syntax:
+
+```liquid
+{% include embed/video.html src='{URL}' %}
+```
+
+Where `URL` is an URL to a video file e.g. `/assets/img/sample/video.mp4`.
+
+You can also specify additional attributes for the embedded video file. Here is a full list of attributes allowed.
+
+- `poster='/path/to/poster.png'` - poster image for a video that is shown while video is downloading
+- `title='Text'` - title for a video that appears below the video and looks same as for images
+- `autoplay=true` - video automatically begins to play back as soon as it can
+- `loop=true` - automatically seek back to the start upon reaching the end of the video
+- `muted=true` - audio will be initially silenced
+- `types` - specify the extensions of additional video formats separated by `|`. Ensure these files exist in the same directory as your primary video file.
+
+Consider an example utilizing all of the above:
+
+```liquid
+{%
+  include embed/video.html
+  src='/path/to/video/video.mp4'
+  types='ogg|mov'
+  poster='poster.png'
+  title='Demo video'
+  autoplay=true
+  loop=true
+  muted=true
+%}
+```
+
+> It's not recommended to host video files in `assets` folder as they cannot be cached by PWA and may cause issues.
+> Instead, use CDN to host video files. Alternatively, use a separate folder that is excluded from PWA (see `pwa.deny_paths` setting in `_config.yml`).
+{: .prompt-warning }
+
+## Audios
+
+### Audio File
+
+If you want to embed an audio file directly, use the following syntax:
+
+```liquid
+{% include embed/audio.html src='{URL}' %}
+```
+
+Where `URL` is an URL to an audio file e.g. `/assets/img/sample/audio.mp3`.
+
+You can also specify additional attributes for the embedded audio file. Here is a full list of attributes allowed.
+
+- `title='Text'` - title for an audio that appears below the audio and looks same as for images
+- `types` - specify the extensions of additional audio formats separated by `|`. Ensure these files exist in the same directory as your primary audio file.
+
+Consider an example utilizing all of the above:
+
+```liquid
+{%
+  include embed/audio.html
+  src='/path/to/audio/audio.mp3'
+  types='ogg|wav|aac'
+  title='Demo audio'
+%}
+```
+
+> It's not recommended to host audio files in `assets` folder as they cannot be cached by PWA and may cause issues.
+> Instead, use CDN to host audio files. Alternatively, use a separate folder that is excluded from PWA (see `pwa.deny_paths` setting in `_config.yml`).
+{: .prompt-warning }
+
 ## Learn More
 
 For more knowledge about Jekyll posts, visit the [Jekyll Docs: Posts](https://jekyllrb.com/docs/posts/).
