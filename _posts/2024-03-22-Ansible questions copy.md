@@ -170,5 +170,3 @@ If you have a playbook that takes a long time to run because it does many tasks 
 ### How would you handle different environments (e.g., staging, production) in Ansible?
 
 To handle different environments in Ansible, you can use separate inventory files for each environment (e.g., `staging.ini`, `production.ini`) and variable files to define environment-specific configurations. Use Ansible's `--inventory` or `-i` option to specify the correct inventory file when running playbooks. Also, you can organize your playbooks and roles to be reusable across environments, only changing variables as needed for each environment. This approach keeps your Ansible code DRY (Don't Repeat Yourself) and makes managing multiple environments more straightforward.
-
-new one
