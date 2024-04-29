@@ -1,6 +1,6 @@
 ---
 title: Ansible questions
-date: 2020-03-22 11:31:00 -0700
+date: 2024-03-22 11:31:00 -0700
 categories: [network]
 tags: 
 Pin:

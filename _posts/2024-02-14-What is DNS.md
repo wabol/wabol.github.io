@@ -1,6 +1,6 @@
 ---
 title: What is DNS
-date: 2020-02-14 11:11:00 -0700
+date: 2024-02-14 11:11:00 -0700
 categories: [network]
 tags: 
 Pin:
