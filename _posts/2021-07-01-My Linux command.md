@@ -495,3 +495,13 @@ ip -6 address show | grep inet6 | awk '/2409/' | awk '/:ec52/ {print $2}' | cut 
 -w workspace
 
 6fccc2c* image ID
+
+#### Debian mount Samba 
+
+First need install cifs-utils
+
+`apt install cifs-utils`
+
+Then mount folder
+
+`sudo mount.cifs //192.168.9.10/share /mnt/userdata/ -o username=user,password=XG879yy,,uid=debian-transmission,gid=debian-transmission`
