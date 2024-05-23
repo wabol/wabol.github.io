@@ -113,5 +113,6 @@ HashiCorp Vault is an open-source tool designed for securely managing secrets an
    Base64 decode the decrypted data:
    ```shell
    echo "bXlzZWNyZXN0IGRhdGEK" | base64 --decode
+   # The result is "mysecrest data"
    ```
 
