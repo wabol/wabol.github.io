@@ -30,6 +30,7 @@ sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -p
 ```
 - Set iptables rules to forward the traffic between the LAN and Zerotier nodes.
+
 ```shell
 sudo iptables -I FORWARD -i eth0 -j ACCEPT
 sudo iptables -I FORWARD -o eth0 -j ACCEPT
