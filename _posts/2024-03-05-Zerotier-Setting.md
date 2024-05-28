@@ -38,8 +38,9 @@ sudo iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 sudo iptables -I FORWARD -i ZEROTIER_NETWORK_ID -j ACCEPT
 sudo iptables -I FORWARD -o ZEROTIER_NETWORK_ID -j ACCEPT
 sudo iptables -t nat -I POSTROUTING -o ZEROTIER_NETWORK_ID -j MASQUERADE
-# Replace ZEROTIER_NETWORK_ID with the network ID of the Zerotier network. 'ip a' can get it.
 ```
+⚠️ **Warning:** Replace ZEROTIER_NETWORK_ID with the network ID of the Zerotier network. 'ip a' can get it.
+
 - Add static routes to the Ubuntu device. Like 172.22.0.0 via 192.168.1.6(Ubuntun IP)
 - Save the iptables rules.
 ```shell
