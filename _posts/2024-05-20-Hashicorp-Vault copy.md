@@ -115,4 +115,69 @@ HashiCorp Vault is an open-source tool designed for securely managing secrets an
    echo "bXlzZWNyZXN0IGRhdGEK" | base64 --decode
    # The result is "mysecrest data"
    ```
+7. #### Enable database engine and connect to a database
+   Enable the database engine:
+   ```shell
+   vault secrets enable database
+   ```
+   Configure the database engine:
+   ```shell
+   vault write database/config/my-mysql-database \
+    plugin_name=mysql-database-plugin \
+    connection_url="{{username}}:{{password}}@tcp(127.0.0.1:3306)/" \
+    allowed_roles="my-role" \
+    username="root" \
+    password="rootpassword"
+   ```
+    Create a role for the database:
+   ```shell
+   vault write database/roles/my-role \
+    db_name=my-mysql-database \
+    creation_statements="CREATE USER '{{name}}'@'%' IDENTIFIED BY '{{password}}'; GRANT ALL PRIVILEGES ON *.* TO '{{name}}'@'%';" \
+    default_ttl="1h" \
+    max_ttl="24h"
+   ```
+   Create a policy for the database:
+   ```shell
+   vault policy write db-policy.hcl - <<EOF
+   path "database/creds/my-mysql-database" {
+       capabilities = ["read"]
+   }
+   EOF
+   ```
+   Apply the policy to a user:
+   ```shell
+   vault policy write db-policy db-policy.hcl
+   ```
+   Create a AppRole for the database:
+   ```shell
+   vault write auth/approle/role/my-app-role token_policy="db-policy"
+   ```
+   Get a token for the AppRole:
+   ```shell
+   vault read auth/approle/role/my-app-role/role-id
+   vault write -f auth/approle/role/my-app-role/secret-id
+   ```
+   Use the token to connect to the database:
+   ```shell
+   # Vault address and Approle config
+   VAULT_ADDR="http://127.0.0.1:8200"
+   ROLE_ID="<your_role_id>"
+   SECRET_ID="<your_secret_id>"
 
+   # Get a token for the AppRole
+   VAULT_TOKEN=$(curl -s --request POST --data "{\"role_id\": \"${ROLE_ID}\", \"secret_id\": \"${SECRET_ID}\"}" ${VAULT_ADDR}/v1/auth/approle/login | jq -r '.auth.client_token')
+
+   # Get dynamic credentials from Vault
+   DB_CREDENTIALS=$(curl -s --header "X-Vault-Token: ${VAULT_TOKEN}" ${VAULT_ADDR}/v1/database/creds/my-role)
+
+   DB_USERNAME=$(echo $DB_CREDENTIALS | jq -r '.data.username')
+   DB_PASSWORD=$(echo $DB_CREDENTIALS | jq -r '.data.password')
+
+   # Print the credentials
+   echo "Username: $DB_USERNAME"
+   echo "Password: $DB_PASSWORD"
+
+   # Connect to the database using the credentials
+   mysql -u $DB_USERNAME -p$DB_PASSWORD -h 127.0.0.1 my-mysql-database -p 3306
+   ```
