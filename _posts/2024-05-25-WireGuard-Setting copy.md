@@ -104,6 +104,4 @@ sudo sysctl -p # Apply the changes
 
 ⚠️ **Warning:** Please don't forgot set the static route in your router.
 
-
-
-
+{% include analysis.html %}
