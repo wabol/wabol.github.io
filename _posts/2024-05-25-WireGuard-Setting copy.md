@@ -103,5 +103,3 @@ sudo sysctl -p # Apply the changes
 ```
 
 ⚠️ **Warning:** Please don't forgot set the static route in your router.
-
-<script defer src="https://tj.698423.xyz/script.js" data-website-id="3e0a6a9c-e6e1-462b-bcc7-22e9a15fb38e"></script>
