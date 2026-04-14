@@ -55,8 +55,8 @@ analytics:
   goatcounter:
     id:
   umami:
-    id: "3e0a6a9c-e6e1-462b-bcc7-22e9a15fb38e"
-    domain: "https://tj.698423.xyz"
+    id:
+    domain:
   matomo:
     id:
     domain:
