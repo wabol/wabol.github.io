@@ -1,6 +1,6 @@
 ---
 title: Vim search configuration
-date: 2025-02-14 08:31:00 -0700
+date: 2026-02-14 08:31:00 -0700
 categories: [vim]
 tags: 
 Pin:
