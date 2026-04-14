@@ -18,16 +18,16 @@ image:
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
-# H1 - heading
+# H1 — heading
 {: .mt-4 .mb-0 }
 
-## H2 - heading
+## H2 — heading
 {: data-toc-skip='' .mt-4 .mb-0 }
 
-### H3 - heading
+### H3 — heading
 {: data-toc-skip='' .mt-4 .mb-0 }
 
-#### H4 - heading
+#### H4 — heading
 {: data-toc-skip='' .mt-4 }
 <!-- markdownlint-restore -->
 
@@ -99,7 +99,7 @@ Moon
 
 ## Footnote
 
-Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
+Clicking the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
 
 ## Inline code
 
@@ -113,7 +113,8 @@ Here is the `/path/to/the/file.extend`{: .filepath}.
 
 ### Common
 
-```text
+<!-- markdownlint-disable-next-line MD040 -->
+```
 This is a common code snippet, without syntax highlight and line number.
 ```
 
