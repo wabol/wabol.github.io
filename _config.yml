@@ -3,124 +3,118 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
+# The language of the webpage
 lang: en
 
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: America/Los_Angeles # Asia/Shanghai
+# Change to your timezone
+timezone: America/Los_Angeles
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# jekyll-seo-tag settings
 # ↓ --------------------------
 
-title: Daxia's Notes # the main title
+title: Daxia's Notes
 
-tagline: Find it more easy at anytime # it will display as the sub-title
+tagline: Find it more easy at anytime
 
-description: >- # used by seo meta and the atom feed
+description: >-
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
+# Fill in the protocol & hostname for your site.
 url: "https://wabol.github.io"
 
 github:
-  username: wabol # change to your github username
+  username: wabol
 
 twitter:
-  username: twitter_username # change to your twitter username
+  username: twitter_username
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Daxia
-  email: example@domain.com # change to your email address
+  email: example@domain.com
+  fediverse_handle:
   links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
-    - https://github.com/username # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://twitter.com/username
+    - https://github.com/username
 
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
-  bing: # fill in your Bing verification code
-  alexa: # fill in your Alexa verification code
-  yandex: # fill in your Yandex verification code
-  baidu: # fill in your Baidu verification code
-  facebook: # fill in your Facebook verification code
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-google_analytics:
-  id: "G-CR6N58SHGC" # fill in your Google Analytics ID
+# Web Analytics Settings
+analytics:
+  google:
+    id: "G-CR6N58SHGC"
+  goatcounter:
+    id:
+  umami:
+    id: "3e0a6a9c-e6e1-462b-bcc7-22e9a15fb38e"
+    domain: "https://tj.698423.xyz"
+  matomo:
+    id:
+    domain:
+  cloudflare:
+    id:
+  fathom:
+    id:
+
+# Page views settings
+pageviews:
+  provider:
 
 # Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
-theme_mode: # [light | dark]
+theme_mode:
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-img_cdn: "https://chirpy-img.netlify.app"
+# The CDN endpoint for media resources.
+cdn: "https://chirpy-img.netlify.app"
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "https://raw.githubusercontent.com/lyducka/pic/master/uPic/avatar-new.png"
+
+# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
+social_preview_image:
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
-  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: giscus
   disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
+    shortname:
   utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
+    repo:
+    issue_term:
   giscus:
-    repo: wabol/wabol.github.io # <gh-username>/<repo>
+    repo: wabol/wabol.github.io
     repo_id: R_kgDOJvfX7Q
     category: Announcements
     category_id: DIC_kwDOJvfX7c4CXSTE
-    mapping: pathname # optional, default to 'pathname'
-    input_position: bottom # optional, default to 'bottom'
-    lang: en # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    mapping: pathname
+    strict:
+    input_position: bottom
+    lang: en
+    reactions_enabled:
 
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+# Self-hosted static assets, optional
 assets:
   self_host:
-    enabled: # boolean, keep empty means false
-    # specify the Jekyll environment, empty means both
-    # only works if `assets.self_host.enabled` is 'true'
-    env: # [development | production]
+    enabled:
+    env:
 
 pwa:
-  enabled: true # the option for PWA feature (installable)
+  enabled: true
   cache:
-    enabled: true # the option for PWA offline cache
-    # Paths defined here will be excluded from the PWA cache.
-    # Usually its value is the `baseurl` of another website that
-    # shares the same domain name as the current website.
+    enabled: true
     deny_paths:
-      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
+      # - "/example"
 
 paginate: 10
 
@@ -128,12 +122,12 @@ paginate: 10
 baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
-markdown: kramdown
+
 kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+  syntax_highlighter_opts:
     css_class: highlight
-    # default_lang: console
     span:
       line_numbers: false
     block:
@@ -147,14 +141,12 @@ collections:
 
 defaults:
   - scope:
-      path: "" # An empty string here means all files in the project
+      path: ""
       type: posts
     values:
       layout: post
-      comments: true # Enable comments in posts.
-      toc: true # Display TOC column in posts.
-      # DO NOT modify the following parameter unless you are confident enough
-      # to update the code of all other post links in this project.
+      comments: true
+      toc: true
       permalink: /posts/:title/
   - scope:
       path: _drafts
@@ -162,14 +154,10 @@ defaults:
       comments: false
   - scope:
       path: ""
-      type: tabs # see `site.collections`
+      type: tabs
     values:
       layout: page
       permalink: /:title/
-  - scope:
-      path: assets/js/dist
-    values:
-      swcache: true
 
 sass:
   style: compressed
@@ -190,8 +178,9 @@ exclude:
   - tools
   - README.md
   - LICENSE
-  - rollup.config.js
-  - package*.json
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
 
 jekyll-archives:
   enabled: [categories, tags]
