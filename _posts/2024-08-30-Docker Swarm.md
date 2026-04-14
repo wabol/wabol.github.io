@@ -1,9 +1,10 @@
 ---
 title: Docker Swarm
 date: 2024-08-30 11:31:00 -0700
-categories: [docker]
+categories: [Docker]
 tags: 
 Pin:
+render_with_liquid: false
 ---
 
 # Docker Swarm

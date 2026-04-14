@@ -1,7 +1,7 @@
 ---
 title: Adding a New Port to an Existing Docker Container
 date: 2024-06-01 11:31:00 -0700
-categories: [docker]
+categories: [Docker]
 tags: 
 Pin:
 ---
@@ -47,4 +47,3 @@ This guide explains how to add a new port to an existing Docker container using 
 ## Summary
 
 By following these steps, you can forward a new port to an existing Docker container using `alpine/socat` and Docker networking. This allows you to expose additional services without modifying the original container configuration.
-

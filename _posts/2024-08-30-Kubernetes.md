@@ -1,7 +1,7 @@
 ---
 title: Kubernetes
 date: 2024-11-01 11:31:00 -0700
-categories: [kubernetes]
+categories: [Kubernetes]
 tags: 
 Pin:
 ---
