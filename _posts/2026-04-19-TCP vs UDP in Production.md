@@ -1,5 +1,5 @@
 ---
-title: TCP vs UDP in Production: Latency, Reliability, and Business Impact
+title: "TCP vs UDP in Production: Latency, Reliability, and Business Impact"
 date: 2026-04-19 09:00:00 -0700
 categories: [Network]
 tags: [tcp, udp, latency, reliability, cloud-network]
