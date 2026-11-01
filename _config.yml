@@ -26,15 +26,14 @@ github:
   username: wabol
 
 twitter:
-  username: twitter_username
+  username:
 
 social:
   name: Daxia
-  email: example@domain.com
+  email:
   fediverse_handle:
   links:
-    - https://twitter.com/username
-    - https://github.com/username
+    - https://github.com/wabol
 
 # Site Verification Settings
 webmaster_verifications:
