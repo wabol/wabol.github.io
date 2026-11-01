@@ -13,7 +13,7 @@ One common answer is the hub-and-spoke design. This article explains what it is,
 
 *Note: the company in this article is a simple example. It is not a real company's network.*
 
-## 1) The problem: connect everything to everything
+## 1. The problem: connect everything to everything
 
 Imagine a company with many networks. If every network connects to every other network, we get a full mesh.
 
@@ -23,7 +23,7 @@ Soon, no one can answer a simple question: "Which path does this traffic take?"
 
 When something breaks, it is hard to find the problem. When we need a change, we have to change it in many places.
 
-## 2) What is a hub-and-spoke network?
+## 2. What is a hub-and-spoke network?
 
 The design is simple:
 
@@ -47,7 +47,7 @@ Hubs in different regions connect to each other over a private backbone. A backb
 
 Shared services, such as DNS and central firewalls, often live in the data center and serve all the spokes.
 
-## 3) Why companies like this design
+## 3. Why companies like this design
 
 ### 3.1 One place to set the rules
 
@@ -79,7 +79,7 @@ Traffic always takes a clear path: spoke, then hub, then spoke. The hub sees mos
 
 When a user says "the network is slow," we know where to look first. A clear path means faster troubleshooting.
 
-## 4) One hub is not always enough
+## 4. One hub is not always enough
 
 A large company may have systems in many parts of the world. One single hub for the whole world is not a good idea. Traffic may need to travel a very long way just to reach the hub.
 
@@ -93,7 +93,7 @@ In some designs, traffic between hubs also passes through a central firewall, of
 
 This is still the same idea. We just use it at two levels: spokes connect to a regional hub, and regional hubs connect to each other.
 
-## 5) The costs and the risks
+## 5. The costs and the risks
 
 This design is not perfect. We need to be honest about its weak points.
 
@@ -102,7 +102,7 @@ This design is not perfect. We need to be honest about its weak points.
 - **The path can be longer.** Two spokes in the same city may send traffic to a hub far away and back. The same is true when traffic between regions must first go to a central firewall for a check. That check adds safety, but it also adds time and load. For traffic that needs very low latency, we may need a direct connection as a special case.
 - **Cost and complexity move to the hub.** The design does not remove hard problems. It moves them to the center, where we must design routing and firewalls with care. For example, traffic must take the same path in both directions when it passes a firewall.
 
-## 6) A short checklist
+## 6. A short checklist
 
 A hub-and-spoke design is often a good choice when:
 
@@ -114,7 +114,7 @@ A hub-and-spoke design is often a good choice when:
 
 It may not be a good choice when two systems need the lowest possible latency between them, all the time. In that case, a direct connection can be added for that special traffic.
 
-## 7) Summary
+## 7. Summary
 
 The hub-and-spoke design is popular because it is simple to understand and simple to grow:
 
