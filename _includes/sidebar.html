@@ -5,7 +5,11 @@
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
       {%- if site.avatar != empty and site.avatar -%}
         {%- capture avatar_url -%}
-          {% include media-url.html src=site.avatar %}
+          {%- if site.avatar contains '://' -%}
+            {% include media-url.html src=site.avatar %}
+          {%- else -%}
+            {{ site.avatar | relative_url }}
+          {%- endif -%}
         {%- endcapture -%}
         <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
       {%- endif -%}
